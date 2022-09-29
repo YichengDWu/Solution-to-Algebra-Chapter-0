@@ -5265,8 +5265,48 @@ R\cong R\left[x\right]/\left(x\right),
 we see $R$ is Noetherian.
 \end{solution}
 
+\subsection{\textsection2. UFDs, PIDs, Euclidean domains}
 
-\newpage
+\begin{problem}[2.2]
+Let $R$ be a UFD, and let $a,b,c$ be elements of $R$ such that $a\mid bc$ and $\gcd(a,b)=1$. Prove that $a$ divides $c$.
+\end{problem}
+\begin{solution}
+If $c=0$ there is nothing to prove. We only consider $c\neq 0$.
+Denote the multisets of irreducible factors of $r\in R$ by $M(r)$. We have $au=bc$ for some $u\in R$ since $a\mid bc$. Then
+\[
+M(au)=M(bc).
+\]
+According to Lemma 2.1., we have 
+\[
+M(a)\cup M(u)=M(b)\cup M(c).
+\]
+For any nonunit $q\in M(a)$, we have $q\in M(a)\cup M(u)=M(b)\cup M(c)$. But $q\notin M(b)$ since $\gcd(a,b)=1$. Thus $q\in M(c)$. This implies $M(a)\subset M(c)$, which follows $a\mid c$.
+\end{solution}
+
+\begin{problem}[2.7]
+Let $R$ be a Noetherian domain, and assume that for all nonzero $a, b$ in $R$, the greatest common divisors of $a$ and $b$ are linear combinations of $a$ and $b$. Prove that $R$ is a PID.
+\end{problem}
+\begin{solution}
+Let $I$ be an ideal of $R$, we need to show $I$ is principal. We know that $I=(a_1,a_2,..,a_n)$ since $R$ is Noetherian. If $n=1$ there is nothing to prove. Suppose $n>1$, let $d=\gcd(a_1,a_2)=\beta a_1+\alpha a_2\in (a_1,a_2)$, which implies $(c)\subset (a1,a_2)$. Since $(a_1,a_2)\subset (c)$ by the definition of $c$, $(a_1,a_2)=(d)$. Then $I=(d,a_3,a_3,...a_n)$. We repeat the process til the length of $I$ is reduced to 1.
+\end{solution}
+
+\begin{problem}[2.8]
+Let $R$ be a UFD, and let $I\neq (0)$ be an ideal of $R$. Prove that every descending
+chain of principal ideals containing $I$ must stabilize.
+\end{problem}
+\begin{solution}
+    Suppose there is such a chain $\{r_{i}\}$ that does not stabilize. Then the number of the irreducible elements in the factorization of each $(r_i)$ is a descending chain and does not stabilize either. But they have a minimal, the number of the irreducible elements of the factorization of $I$—a contradiction.
+\end{solution}
+
+\begin{problem}[2.12]
+    Prove that if $R[x]$ is a PID, then $R$ is a field.
+\end{problem}
+\begin{solution}
+    Let $a$ be a nonzero element of $R$, we need to show $a$ is a unit. Let $I=(a,x)=(f)$, then $a=fg$ and $x=fh$ for some $g,h\in R[x]$. Note that $a=fg$ implies $f$ and $g$ are constants. And $x=fh$ implies $h=\alpha x+\beta$ be comparing the degree of both sides. Then $x=\alpha fx+\beta f$, evaluating at $x=1$ gives $1=\alpha f$. It follows $(f)=(1)=R[x]$. Therefore, $1\in (a,x)=(f)$, $1=ra+sx$ for some $r,s\in R[x]$. Evaluating at $x=0$ gives $1=r(0)a$.
+\end{solution}
+
+
+   \newpage
 \section{Chapter VI.\hspace{0.2em} Linear algebra}
 \subsection{\textsection4. Presentations and resolutions}
 \begin{problem}[4.1]
