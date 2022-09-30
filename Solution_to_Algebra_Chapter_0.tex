@@ -5305,6 +5305,70 @@ chain of principal ideals containing $I$ must stabilize.
     Let $a$ be a nonzero element of $R$, we need to show $a$ is a unit. Let $I=(a,x)=(f)$, then $a=fg$ and $x=fh$ for some $g,h\in R[x]$. Note that $a=fg$ implies $f$ and $g$ are constants. And $x=fh$ implies $h=\alpha x+\beta$ be comparing the degree of both sides. Then $x=\alpha fx+\beta f$, evaluating at $x=1$ gives $1=\alpha f$. It follows $(f)=(1)=R[x]$. Therefore, $1\in (a,x)=(f)$, $1=ra+sx$ for some $r,s\in R[x]$. Evaluating at $x=0$ gives $1=r(0)a$.
 \end{solution}
 
+\begin{problem}[2.17]
+    
+\end{problem}
+\begin{solution}
+    Let $m$ be the smallest value of the Euclidean valuation on nonzero, non unit elements in $R$. Let $u$ be 
+\end{solution}
+
+\begin{problem}[2.18]
+    
+\end{problem}
+\begin{solution}
+\begin{enumerate}[(i)]
+    \item  If $b\neq 0$, then
+        \begin{align*}        
+            N(z)&=\left(a+\frac{b}{2}\f\right)^2+\left(\frac{b\sqrt{19}}{2}\right)^2\\
+                &=b^2\left(\frac{a}{b}+\frac{1}{2}\right)^2+\frac{19b^2}{4}\\
+            &=b^2\left(\left(\frac{a}{b}+\frac{1}{2}\right)^2+\frac{19}{4}\right)\\
+            &\geq \frac{19}{4}b^2.
+        \end{align*}
+
+If $b^2\geq 2$, then 
+\[
+N(z)=\frac{19}{4}b^2\geq\frac{19}{4}*2=19/2>5.
+\]
+Otherwise, $b^2=1$ and 
+\[
+N(z)=\left(a+\frac{1}{2}\right)^2+\frac{19}{4}\geq\left(\frac{1}{2}\right)^2+\frac{19}{4}=5. 
+\]
+The inequality comes from $a\in \mathbb{Z}$. Now the $b=0$, then $N(z)=a^2$, so the smallest values of $N(z)$ are 0,1,4. The value $5$ is achieved by letting $a=0, b=1$.
+\item Suppose $z=a+b\sigma$ is a unit of $\mathbb{Z}[\sigma]$. If $b\neq 0$, then 
+\[
+1=N(zz^{-1})=N(z)N(z^{-1})\geq 5*5=25,
+\]
+
+which is a contradiction. Thus $b=0$ and $a^2=N(a)=N(z)=1$, then $z=a=1,-1$. 
+\item Consider 
+\[
+2=qc+r
+\]
+where $q\in \mathbb{Z}[\sigma]$ and $r=0,1$ or $-1$. If $r=0$, then $c\mid 2$. If $r=-1$, then $3=qr$ and $r\mid 3$. Finally, if $r=1$, we have $1=qr$, which contradicts the fact that $c$ is not a unit. Hence,  $c\mid 2$ or $c\mid 3$ in $\mathbb{Z}][\sigma]$. If $q$ and $c$ are both be complex then by (ii) we have 
+\[
+N(qr)=N(q)N(r)\geq 5*5> 3^2>2^2.
+\]
+If only one of $q$ and $r$ is complex, then $qr$ is complex as well, which contradicts the fact $qr=2$ or $3$. Thus, $q,r\in\mathbb{Z}$. We conclude that $r=\pm 2$ or $\pm 3$.
+
+\item Let 
+\[
+\frac{1+i\sqrt{19}}{2}=qc+r,
+\]
+where $q\in \mathbb{Z}[\sigma]$ and $r=0,-1$ or $1$. Then $q$ must be complex since $c,r\in \mathbb{Z}$. It follows that $N(q)\geq 5$ from $(i)$. If $r=0$, then 
+\[
+5=N\left(\frac{1+i\sqrt{19}}{2}\right) = N(q)N(c)\geq5*4=20,
+\]
+which is not possible. If $r=1$, then we have 
+\[
+5=N\left(\frac{-1+i\sqrt{19}}{2}\right) = N(q)N(c)\geq5*4=20,
+\]
+which is again not possible. Finally, if $r=-1$, then 
+\[
+7=N\left(\frac{3+i\sqrt{19}}{2}\right) = N(q)N(c)\geq5*4=20.
+\]
+This is possible either. 
+\end{enumerate}
+\end{solution}
 
    \newpage
 \section{Chapter VI.\hspace{0.2em} Linear algebra}
