@@ -5069,6 +5069,35 @@ is exact, and that $L$ and $N$ are Noetherian. Prove that $M$ is Noetherian. [\t
 Suppose that $f:L\to M$ and $g:M\to N$. According to the exactness of the complex, we have $\ker g=\im f$. Since $N$ is Noetherian and $\im g$ is a submodule of $N$, $\im g$ is Noetherian. Note that $\im g\cong M/\ker g=M/\im f$, we see $M/\im f$ is Noetherian. Since $L$ is Noetherian and $\im f\cong L/\ker f$, we have $\im f$ is Noetherian. Since $M/\im f$ and $\im f$ are both Noetherian, we can conclude $M$ is Noetherian.
 \end{solution}
 
+\begin{problem}[7.6]
+    Let $\phi:M\to N$ be a $R$-module homomorphism. Then $\phi$ has a right-inverse if and only if the sequence
+    \[
+0\to \ker \phi\to M\stackrel{\phi}\to N \to 0
+    \]
+    splits.
+\end{problem}
+\begin{solution}
+    If the sequence splits, then $\phi$ is the projection $\ker\phi\oplus N\to N$. The embedding of $N$ into a direct sum $\ker\phi\oplus N$ gives a right-inverse. Conversely, assume that $\phi$ has a right inverse $\psi$, define the isomorphism $M\to \ker\phi\oplus N$ to be 
+    \[
+m\mapsto (m-\psi \phi(m), \phi(m)).
+    \]
+    Note that 
+    \[
+\phi(m-\psi\phi(m)) = \phi(m)-\phi\psi\phi(m)=0.
+    \]
+    Thus, $m-\psi\phi(m)\in \ker(\phi)$.   The inverse is given by
+    \[
+    (k, n)\mapsto k+\psi(n).
+    \]
+    We need to verify it is the inverse. Indeed,
+    \[
+    m\mapsto (m-\psi \phi(m), \phi(m))\mapsto m- \psi \phi(m)+\psi\phi(m)=m,
+    \]
+    and 
+    \[
+        (k, n)\mapsto k+\psi(n)\mapsto (k+\psi(n)-\psi\phi(k+\psi(n)), \phi(k+\psi(n)))\mapsto(k,n).
+    \]
+\end{solution}
 
 \begin{problem}[7.7]
 $\vartriangleright$ Let
