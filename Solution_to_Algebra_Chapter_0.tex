@@ -4850,6 +4850,23 @@ Let $K$ be a field, and let $k \subseteq K$ be a subfield of $K .$ Show that $K$
 \end{solution}
 
 \subsection{\textsection6. Products, coproducts, etc. in $R$-$\Mod$}
+\begin{problem}[6.1]
+    $F^{R}(A)\cong R^{\oplus A}$.
+\end{problem}
+\begin{solution}
+    It suffices to prove $R^{\oplus A}$ is a free $R$-module on $A$. Let $j: A\to R^{\oplus A}$ defined by sending $a\in A$ to the indicator function $1_a$.  Let $f$ be any function from $A$ to an $R$-module $M$. We need to show there is a unique homomorphism $\phi: R^{\oplus A}\to M$ such that
+    \begin{align*}
+    \phi (j(a)) = f(a)\\
+    \phi(1_a) =f(a)
+    \end{align*}
+for any $a\in A$. Note that every element of $R^{\oplus A}$ can be written in the form
+    \[\sum_{a\in A}{r_a}1_a.\]
+Forced by the commutativity, $\phi$ is uniquely defined by 
+\[
+\sum_{a\in A}{r_a}1_a\mapsto \sum_{a\in A}{r_a}f(a).
+\]
+\end{solution}
+
 \begin{problem}[6.3]
 Let $R$ be a ring, $M$ an $R$-module, and $p : M \to M$ an $R$-module homomorphism such that $p^2 = p$. (Such a map is called a projection.) Prove that $M\cong\ker p \oplus\im p$.
 \end{problem}
