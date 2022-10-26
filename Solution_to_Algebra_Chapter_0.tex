@@ -4882,6 +4882,46 @@ which implies
 Therefore we show that $M\cong\ker p \oplus\im p$.
 \end{solution}
 
+\begin{problem}[6.6]
+    Prove $R^{\oplus n}\cong \Hom(R^{\oplus n},R)$.
+\end{problem}
+\begin{solution}
+    A homomorphism $g\in \Hom(R^{\oplus n}, R)$ is identified by how it acts on a basis. Define $f:\Hom(R^{\oplus n},R)\to R^{\oplus n}$ by 
+    \[
+    g\mapsto (g(e_1),g(e_2),\dots, g(e_n)),
+    \]
+    and the inverse is 
+    \[
+    r\mapsto r':\to r'\cdot r.
+    \]
+\end{solution}
+
+\begin{problem}[6.9]
+Let $R$ be a ring, $F$ a nonzero free $R$-module, and let $\varphi: M \rightarrow N$ be a homomorphism of $R$-modules. Prove that $\varphi$ is onto if and only if for all $R$-module homomorphisms $\alpha: F \rightarrow N$ there exists an $R$-module homomorphism $\beta: F \rightarrow M$ such that $\alpha = \phi\circ\beta$.
+\end{problem}
+\begin{solution}
+    Let $j:A\to F$ be a set function from a basis $A$ to $F$. If $\phi$ is onto, then define a set function $f:A\to M$ to be 
+    \[
+    a\mapsto \psi(\alpha(j(a))),
+    \]
+    where $\psi$ is the right inverse of $\phi$. Then there is a unique homomorphism $\beta:F\to M$ such that 
+    \[
+    f=\beta\circ j.
+    \]
+    Then
+    \[
+     \phi\circ \beta\circ j= \phi \circ f(a) =\phi\circ\psi \circ\alpha\circ j=\alpha\circ j.
+    \]
+    Note that every element of $F$ can be written as
+    \[
+        \sum_{a\in A}{r_aj(a)},
+    \]
+    now apply $\phi \circ \beta$ to it, we conclude that $\phi\circ=\alpha$.
+
+    Conversely, let $n\in N$, we need to show $n\in \im \phi$. Define $\gamma_n(a)=n$ for all $a\in A$. This uniquely defines a homomorphism $\alpha_n: F\to N$. By the assumption, $n = \alpha_n(j(a))=\phi\circ\beta(j(a))\in \im \phi$.
+    
+    
+\end{solution}
 
 \hypertarget{Exercise III.6.16}{}
 \begin{problem}[6.16]
