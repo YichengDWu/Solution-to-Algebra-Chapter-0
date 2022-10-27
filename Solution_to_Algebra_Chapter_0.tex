@@ -5500,8 +5500,24 @@ $\mathbb{Z}/6\mathbb{Z}$ is not an integral domain and $\mathbb{Z}/6\mathbb{Z}$ 
 we have $[2]_6+[3]_6=[5]_6\notin \operatorname{Tor}(\mathbb{Z}/6\mathbb{Z})$, which implies $\operatorname{Tor}(\mathbb{Z}/6\mathbb{Z})$ is not a submodule of $\mathbb{Z}/6\mathbb{Z}
 ++$.
 \end{solution}
-
-
+\begin{problem}[6.18]
+    $\triangleright$ Let $M$ be an $R$-module, and let $N$ be a submodule of $M$. Prove that if $N$ and $M / N$ are both finitely generated, then $M$ is finitely generated.
+\end{problem}
+\begin{solution}
+    Let $N=\langle a_1,a_2, ...,a_m\rangle$ and $M/N =\langle b_1,b_2, ...,b_n\rangle $. Note the projection map $\pi:M\to M/N$ is surjective, we can find preimages $\{c_1,c_2, ...,c_n\}$ of  $\{b_1,b_2, ...,b_n\}$ in $M$. The claim is that $M==\langle a_1,a_2, ...,a_m, c_1,c_2, ...,c_n\rangle$. Let $k\in M$, then 
+    \[
+        \pi(k)= \sum{r_ib_i}=\sum{r_i\pi(c_i)}=\sum{\pi(r_ic_i)}=\pi(\sum{r_ic_i}).
+    \]
+    It implies $k-\sum{r_ic_i}\in N$, then
+    \[
+    k-\sum{r_ic_i}=\sum{n_ia_i}.
+    \]
+    We conclude that 
+    \[
+    k=\sum{r_ic_i}+\sum{n_ia_i}.
+    \]
+ 
+\end{solution}
 
 
 \begin{problem}[4.4]
