@@ -5959,6 +5959,13 @@ $\neg$ Let $R$ be a commutative ring, and let $S \subseteq R$ be a multiplicativ
 
 \end{solution}
 
+\begin{problem}[6.3]
+	Prove that an $R$-linear map $f:A \rightarrow B$ is injective if and only if the induced map $\Hom_R(B, Q)} \rightarrow \Hom_R(A, Q)$ is surjective for all injective modules $Q$. (Hint: $R$-Mod has enough injectives.)
+\end{problem}
+\begin{solution}
+	There is a injective module $Q$ and a monomorphism $g:A\to Q$. Then, we have a map $\varphi:B\to Q$ such that $f\circ \varphi=g$, thus $f$ is a monomorphism.
+\end{solution}
+
 \begin{problem}[6.4]
 	Let $\left\{P_i\right\}_{i \in I}$ be a family of $R$-modules. Prove that $\bigoplus_i P_i$ is projective if and only if each $P_i$ is projective. 
 \end{problem}
@@ -5973,7 +5980,8 @@ $\neg$ Let $R$ be a commutative ring, and let $S \subseteq R$ be a multiplicativ
 	Prove that a module over a PID is injective if and only if it is divisible.
 (Use Baer's criterion.)
 \end{problem}
-\begin{solution}
+\begin{solution}.
+
 Suppose $Q$ is divisible. Let $I$ be an ideal of $R$, and let $f:I=\langle a\rangle \to Q$ be a $R$-linear map. 
 Any nozero element $r\in R$ is a non-zero-divisor, so $aQ=Q$ and there is element $s\in Q$ such that $as=f(a)$, we can denote $s$ by $f(a)/r$.
 We then extend $f$ to $\hat f:R\to Q$ by
@@ -5992,7 +6000,7 @@ Define $f$ to be the map $rR\to Q$ by
 	f(ra)= r\dcot q.
 \]
 
-Now the map $f$ can be exteneded to $\hat f:R\to Q$, so
+The function is well-defined since $R$ is an integral domain and $a$ is uniquely determined. Now the map $f$ can be exteneded to $\hat f:R\to Q$, so
 \[
 	\hat f(r) = r\cdot \hat f(1) = f(1\cdot r)=1\cdot q=q.
 \]
