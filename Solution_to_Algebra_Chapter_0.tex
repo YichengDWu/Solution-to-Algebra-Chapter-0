@@ -5973,6 +5973,31 @@ $\neg$ Let $R$ be a commutative ring, and let $S \subseteq R$ be a multiplicativ
 	Prove that a module over a PID is injective if and only if it is divisible.
 (Use Baer's criterion.)
 \end{problem}
+\begin{solution}
+Suppose $Q$ is divisible. Let $I$ be an ideal of $R$, and let $f:I=\langle a\rangle \to Q$ be a $R$-linear map. 
+Any nozero element $r\in R$ is a non-zero-divisor, so $aQ=Q$ and there is element $s\in Q$ such that $as=f(a)$, we can denote $s$ by $f(a)/r$.
+We then extend $f$ to $\hat f:R\to Q$ by
+\[
+r\mapsto r\cdot s
+\]
+and $\hat{f}(0)=0$. It is trivial to see that $\hat{f}$ is a $R$-linear map. For any $ta\in I$, we  
+\[
+\hat f(ta)=(ta)s=t(as)=tf(a)=f(ta).
+\]
+Thus, $\hat f|_I=f$.  By Baer's criterion, $Q$ is injective.
+
+Conversely, suppose $Q$ is injective. Let $r$ be a non-zero-divisor of $R$ and $q\in Q$.
+Define $f$ to be the map $rR\to Q$ by
+\[
+	f(ra)= r\dcot q.
+\]
+
+Now the map $f$ can be exteneded to $\hat f:R\to Q$, so
+\[
+	\hat f(r) = r\cdot \hat f(1) = f(1\cdot r)=1\cdot q=q.
+\]
+
+\end{solution}
 
 \begin{problem}[6.15]
 	Prove that $Q_1 \oplus Q_2$ is injective if and only if $Q_1, Q_2$ are both injective. More generally, prove that if $\left\{Q_i\right\}_{i \in I}$ is a family of $R$-modules, then $\prod_i Q_i$ is injective if and only if each $Q_i$ is injective.
