@@ -110,9 +110,6 @@ Github:
 \section*{License}
 This work is licensed under a \href{http://creativecommons.org/licenses/by-nc-sa/4.0/}{Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License}.
 \vfill
-\begin{figure}[h]
-	\centering\includegraphics[width=0.38\textwidth]{./BY-NC-SA}
-\end{figure}
 
 \newpage
 
@@ -5934,6 +5931,40 @@ $\neg$ Let $R$ be a commutative ring, and let $S \subseteq R$ be a multiplicativ
 	\]
 \end{solution}
 
+\subsection{\textsection2. Projective and injective modules and the Ext functors}
+\begin{problem}[6.1]
+	Prove that an $R$-module $P$ is projective if and only if every epimorphism $M \rightarrow P$ splits and $Q$ is injective if and only if every monomorphism $Q \rightarrow M$ splits. $[\$ 6.1]$
+\end{problem}
+\begin{solution}
+	Suppose $P$ is projective. Then, for any epimorphism $\varphi: M \rightarrow P$, we have a exact sequence
+	\[
+		\Hom_R(R, M) \longrightarrow \Hom_R(P, P) \longrightarrow 0.	
+	\]
+	Select $1_P\in \Hom_R(P, P)$, there is a homomorphism $\psi:P\to M$ such that $\varphi\circ \psi=1_P$. I claim that 
+	\[
+	 M = \ker(\varphi) \oplus \im(\psi).	
+	\]
+	Let $v\in M$ and w=\psi\varphi(v)$, then
+	\[
+		\varphi(v-w)=\varphi(v)-\varphi(w)=\varphi(v)-\varphi\psi\varphi(v)=0.
+	\]
+	That is $v-w\in \ker(\varphi)$. Thus, $M=\ker(\varphi) + \im(\psi)$. 
+	Let $u\in \ker(\varph)\cap \im(\psi)$, then $u=\psi(p)$ for some $p\in P$. Applying $\varphi$ to both sides, we have
+	\[
+		0=\varphi(u)=\varphi(\psi(p))=\varphi\psi(p)=p.
+	\]
+	Thus, the sum $\ker(\varphi) + \im(\psi)$ is a direct sum.
+
+	Conversely, the $S$ be any generating set of $P$, there is a epimorphism $R^{\oplus S}\to P$. Then $R^{\oplus S}\cong P\oplus K$ for some $R$-module $K$. Thus, $P$ is projective.
+
+\end{solution}
+
+\begin{problem}[6.7]
+	Give a proof of the fact that projective modules are flat, using adjunction.
+\end{problem}
+\begin{solution}
+
+\end{solution}
 
 \newpage
 \newpage
