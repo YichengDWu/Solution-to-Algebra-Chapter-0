@@ -5582,6 +5582,24 @@ $[\S 4.2, \S 5.3]$
 \end{itemize}
 \end{solution}
 
+\begin{problem}[4.13]
+	Let $R$ be a commutative ring. A tuple $\left(a_1, a_2, \ldots, a_n\right)$ of elements of $R$ is a regular sequence if $a_1$ is a non-zero-divisor in $R, a_2$ is a non-zero-divisor moduldo $\left(a_1\right), a_3$ is a non-zero-divisor modulo $\left(a_1, a_2\right)$, and so on.
+	For $a, b$ in $R$, consider the following complex of $R$-modules:
+	\[(*) \quad 0 \longrightarrow R \stackrel{d_2}{\longrightarrow} R \oplus R \stackrel{d_1}{\longrightarrow} R \stackrel{\pi}{\longrightarrow} \frac{R}{(a, b)} \longrightarrow 0\]
+	where $\pi$ is the canonical projection, $d_1(r, s)=r a+s b$, and $d_2(t)=(b t,-a t)$. Put otherwise, $d_1$ and $d_2$ correspond, respectively, to the matrices
+	$$
+	\left(\begin{array}{ll}
+	a & b
+	\end{array}\right), \quad\left(\begin{array}{c}
+	b \\
+	-a
+	\end{array}\right) .
+	$$
+	- Prove that this is indeed a complex, for every $a$ and $b$.
+
+	- Prove that if $(a, b)$ is a regular sequence, this complex is exact.
+\end{problem}
+
 \newpage
 \section{Chapter VII.\hspace{0.2em} Fields}
 \subsection{\textsection1. Field extensions, I}
@@ -6043,26 +6061,6 @@ The function is well-defined since $R$ is an integral domain and $a$ is uniquely
 	It gives $\operatorname{Ext}_R^i(M, Q)=0$ for $i>2$.
 \end{solution}
 
-\begin{solution}
-	$(i)\Rightarrow (ii)$. Let $Q$ be any $R$-module. There is an injection $f:Q\to M$ into a injective $R$-module $M$. We have the 
-	following exact sequence
-	\[
-		0\to Q\to M\to \frac{M}{Q}\to 0.
-	\]
-	Since $M/Q$ is projective by assumption, the sequence splits, $M=Q\oplus \frac{M}{Q}$. 
-	
-
-
-
-	$(ii)\Rightarrow (i)$. Let $P$ be any $R$-module and $S$ be any generating set of $P$. There is a 
-	surjection $f$ of the free $R$-module $F(S)$ onto $P$. Consider the exact sequence
-	\[
-		0\to \ker(f)\to F(S)\overset{f}\to P\to 0,
-	\]
-	since $\ker(f)$ is injective by assumption, the squence splits, that is, $F(S)\cong \ker(f)\oplus P$. Since $P$ is a direct summand of 
-	the free $R$-module $F(S)$, $P$ is projective.
-
-\end{solution}
 \newpage
 \newpage
 \section{Appendix}
