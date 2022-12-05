@@ -4353,6 +4353,18 @@ Prove that the homomorphic image of a Noetherian ring is Noetherian. That is, pr
 	which leads to a contradiction. Thus we show that the ideal $(2, x)$ of $\Z[x]$ is not principal.
 \end{solution}
 
+\begin{problem}[4.4]
+	Prove that if $k$ is a field, then $k[x]$ is a PID.
+\end{problem}
+\begin{solution}
+	Let $I \subseteq k[x]$ be any ideal. If $I=(0)$, then $I$ is principal. If $I \neq(0)$, let $f(x)$ be a monic polynomial in $I$ of minimal degree.
+	By the Division Algorithm for Polynomials, for any $g\in I$, there exist $q,r\in k[x]$ such that
+	\[
+		g=fq+r
+	\]
+	with either $r=0$ or $\deg(r)<\deg(f)$. Since $I$ is an ideal, we have $r\in I$. We must have $r=0$ since $\deg(r)<\deg(f)$ violates the minimality of $\deg(f)$. Thus we conclude $I=(f)$, which means $I$ is principal. Thus we show $k[x]$ is a PID.
+\end{solution}
+
 \hypertarget{Exercise III.4.5}{}
 \begin{problem}[4.5]
 Let $I, J$ be ideals in a commutative ring $R$, such that $I+J = (1)$. Prove that $IJ = I \cap J$.[\textsection4.1]
